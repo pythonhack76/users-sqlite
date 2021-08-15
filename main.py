@@ -22,6 +22,13 @@ def add_new_user():
         cursor.execute("INSERT INTO users(username,password) VALUES(?,?)",(newUsername, newPassword))
         db.commit()
 
+def delete_user():
+    pass
+
+
+def update_user():
+    pass 
+
 
 
 window = Tk()
