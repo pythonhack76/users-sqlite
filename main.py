@@ -17,6 +17,8 @@ def add_new_user():
 
     if int(result[0]) > 0:
         error["text"] = "Errore: Username già presente"
+    elif newUsername  == '' or newPassword == '':
+        error["text"] ="Errore: Tutti i campi devono essere compilati!"
     else:
         error["text"] = "Added New USers"
         cursor.execute("INSERT INTO users(username,password) VALUES(?,?)",(newUsername, newPassword))
